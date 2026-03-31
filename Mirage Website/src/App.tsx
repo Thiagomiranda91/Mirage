@@ -122,16 +122,6 @@ const Hero = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) =>
   );
 };
 
-const Brands = () => {
-  return (
-    <section className="py-10 border-y border-white/10 bg-white/5">
-      <div className="max-w-7xl mx-auto px-6">
-        <p className="text-center text-sm text-zinc-500 mb-6 font-medium uppercase tracking-widest">Trusted by innovative companies worldwide</p>
-      </div>
-    </section>
-  );
-};
-
 const Services = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) => {
   const services = [
     {
@@ -1006,7 +996,6 @@ export default function App() {
         {currentPage === 'home' ? (
           <>
             <Hero setCurrentPage={setCurrentPage} />
-            <Brands />
             <Services setCurrentPage={setCurrentPage} />
             <About setCurrentPage={setCurrentPage} />
             <Work />
