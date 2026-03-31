@@ -122,22 +122,6 @@ const Hero = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) =>
   );
 };
 
-const Brands = () => {
-  return (
-    <section className="py-10 border-y border-white/10 bg-white/5">
-      <div className="max-w-7xl mx-auto px-6">
-        <p className="text-center text-sm text-zinc-500 mb-6 font-medium uppercase tracking-widest">Trusted by innovative companies worldwide</p>
-        <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-50">
-          {/* Placeholder logos using text for simplicity, in a real app these would be SVGs */}
-          {['TKM', 'SHOWTECH', 'DIYER', 'SHEPHERD', 'CONWAYS'].map((brand, i) => (
-            <div key={i} className="text-xl font-display font-bold tracking-wider uppercase">{brand}</div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const Services = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) => {
   const services = [
     {
