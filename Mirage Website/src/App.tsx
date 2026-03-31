@@ -124,6 +124,15 @@ const Hero = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) =>
 
 const Brands = () => {
   return (
+    <section className="py-10 border-y border-white/10 bg-white/5">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-50">
+          {[].map((brand, i) => (
+            <div key={i} className="text-xl font-display font-bold tracking-wider uppercase">{brand}</div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
