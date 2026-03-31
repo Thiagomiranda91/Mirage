@@ -424,7 +424,7 @@ const Footer = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) 
             <ul className="space-y-4 text-zinc-400">
               <li>hello@miragedigital.com</li>
               <li>+353 83 847 0796</li>
-              <li>20 Viking Road<br/>Stoneybatter, Dublin, D07 F8C8</li>
+              <li>Dublin, Ireland</li>
             </ul>
           </div>
         </div>
@@ -487,7 +487,7 @@ const ContactPage = () => {
             <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <p className="text-zinc-400 mb-2">hello@miragedigital.com</p>
             <p className="text-zinc-400 mb-2">+353 83 847 0796</p>
-            <p className="text-zinc-400">20 Viking Road<br/>Stoneybatter, Dublin, D07 F8C8</p>
+            <p className="text-zinc-400">Dublin, Ireland</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
