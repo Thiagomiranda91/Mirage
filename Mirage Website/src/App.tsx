@@ -81,10 +81,6 @@ const Hero = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) =>
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-brand mb-6">
-            <span className="w-2 h-2 rounded-full bg-brand animate-pulse" />
-            Award-Winning Digital Agency
-          </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
             We Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-orange-300">Mirages</span> That Become Reality.
           </h1>
