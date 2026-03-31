@@ -122,6 +122,11 @@ const Hero = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) =>
   );
 };
 
+const Brands = () => {
+  return (
+  );
+};
+
 const Services = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) => {
   const services = [
     {
