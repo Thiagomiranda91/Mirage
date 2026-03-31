@@ -96,7 +96,7 @@ const Hero = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) =>
               Start Your Project <ArrowRight size={20} />
             </button>
             <button className="px-8 py-4 rounded-full font-medium border border-white/20 hover:bg-white/5 transition-colors">
-              View Our Work
+              <a href="#work">View Our Work</a>
             </button>
           </div>
         </motion.div>
@@ -259,24 +259,24 @@ const About = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) =
 const Work = () => {
   const projects = [
     {
-      title: "FinTech App Redesign",
-      category: "UI/UX Design",
-      image: "https://images.unsplash.com/photo-1616077168079-7e09a6a715f0?q=80&w=2070&auto=format&fit=crop"
+      title: "UVCtech",
+      category: "Web Design",
+      image: "https://i.ibb.co/0vd8cBb/Thumb1-1.png?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Eco-Brand E-commerce",
-      category: "Web Development",
-      image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2064&auto=format&fit=crop"
+      title: "Formula",
+      category: "Web Design",
+      image: "https://i.ibb.co/zWzZC67M/Thumb2-1.png?q=80&w=2064&auto=format&fit=crop"
     },
     {
-      title: "Global SaaS Campaign",
-      category: "Digital Marketing",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+      title: "Feltrin",
+      category: "Web Design",
+      image: "https://i.ibb.co/m53CscJr/Thumb-1.png?q=80&w=2015&auto=format&fit=crop"
     },
     {
-      title: "Lifestyle Brand Identity",
-      category: "Branding",
-      image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=2194&auto=format&fit=crop"
+      title: "Trinity",
+      category: "Web Design",
+      image: "https://i.ibb.co/20H08BqV/Thumb3-1.png?q=80&w=2194&auto=format&fit=crop"
     }
   ];
 
@@ -288,9 +288,6 @@ const Work = () => {
             <h2 className="text-brand font-semibold tracking-wider uppercase mb-4">Selected Work</h2>
             <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Projects that speak for themselves.</h3>
           </div>
-          <button className="inline-flex items-center gap-2 font-medium hover:text-brand transition-colors">
-            View All Projects <ArrowRight size={20} />
-          </button>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -310,14 +307,6 @@ const Work = () => {
                   alt={project.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute bottom-6 left-6 right-6 z-20 flex justify-between items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-white text-black px-6 py-3 rounded-full font-medium">
-                    View Case Study
-                  </div>
-                  <div className="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center">
-                    <ArrowRight size={20} className="-rotate-45" />
-                  </div>
-                </div>
               </div>
               <div className="flex justify-between items-center">
                 <h4 className="text-2xl font-bold">{project.title}</h4>
