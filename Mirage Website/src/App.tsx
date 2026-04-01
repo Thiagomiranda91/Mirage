@@ -438,6 +438,30 @@ const Footer = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) 
 };
 
 const ContactPage = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://api.staticforms.dev/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        form.reset();
+      } else {
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
   return (
     <div className="pt-40 pb-20 px-6 max-w-7xl mx-auto min-h-screen">
       <motion.div 
@@ -457,20 +481,27 @@ const ContactPage = () => {
           className="bg-white/5 border border-white/10 p-8 rounded-2xl"
         >
           <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <input type="hidden" name="accessKey" value="sf_679b2c274c70ff1d26af80ea" />
+            <input type="text" name="honeypot" style={{ display: 'none' }} />
             <div>
               <label className="block text-sm font-medium text-zinc-400 mb-2">Name</label>
-              <input type="text" className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" placeholder="John Doe" />
+              <input type="text" name="name" required className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" placeholder="John Doe" />
             </div>
             <div>
               <label className="block text-sm font-medium text-zinc-400 mb-2">Email</label>
-              <input type="email" className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" placeholder="john@example.com" />
+              <input type="email" name="email" required className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" placeholder="john@example.com" />
             </div>
             <div>
               <label className="block text-sm font-medium text-zinc-400 mb-2">Message</label>
-              <textarea rows={4} className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" placeholder="Tell us about your project..."></textarea>
+              <textarea name="message" required rows={4} className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" placeholder="Tell us about your project..."></textarea>
             </div>
-            <button type="button" className="w-full bg-brand hover:bg-brand-hover text-white font-bold py-4 rounded-lg transition-colors">Send Message</button>
+            <button type="submit" className="w-full bg-brand hover:bg-brand-hover text-white font-bold py-4 rounded-lg transition-colors">Send Message</button>
+            {isSubmitted && (
+              <div className="p-4 mt-4 text-sm text-green-400 bg-green-400/10 border border-green-400/20 rounded-lg">
+                Thank you for your message! We'll get back to you soon.
+              </div>
+            )}
           </form>
         </motion.div>
         <motion.div 
