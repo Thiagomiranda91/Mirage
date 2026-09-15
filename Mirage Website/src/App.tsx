@@ -241,22 +241,22 @@ const Work = () => {
     {
       title: "UVCtech",
       category: "Web Design",
-      image: "https://i.ibb.co/0vd8cBb/Thumb1-1.png?q=80&w=2070&auto=format&fit=crop"
+      image: "/Thumb1-1.png"
     },
     {
       title: "Formula",
       category: "Web Design",
-      image: "https://i.ibb.co/zWzZC67M/Thumb2-1.png?q=80&w=2064&auto=format&fit=crop"
+      image: "/Thumb2-1.png"
     },
     {
       title: "Feltrin",
       category: "Web Design",
-      image: "https://i.ibb.co/m53CscJr/Thumb-1.png?q=80&w=2015&auto=format&fit=crop"
+      image: "/Thumb-1.png"
     },
     {
       title: "Trinity",
       category: "Web Design",
-      image: "https://i.ibb.co/20H08BqV/Thumb3-1.png?q=80&w=2194&auto=format&fit=crop"
+      image: "/Thumb3-1.png"
     }
   ];
 
