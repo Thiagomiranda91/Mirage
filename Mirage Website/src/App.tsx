@@ -82,7 +82,7 @@ const Hero = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) =>
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
-            We Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-orange-300">Mirages</span> That Become Reality.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-orange-300">Mirages</span> That Become Reality.
           </h1>
           <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl leading-relaxed">
             Transform your brand's online presence with data-driven marketing, stunning design, and cutting-edge technology.
